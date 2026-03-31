@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Us</title>
+    <link rel="stylesheet" href="contactus/contact-style.css">
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Email Us</h1>
+    <form action="submit_form.php" method="post">
+        <label for="name">Name:<s>*</s></label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:<s>*</s></label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:<s>*</s></label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        
+        <center><input type="submit" value="Send Email"></center>
+    </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2025 Millapre's page All rights reserved.</p>
+        
+        <nav>
+            <h5>If you have any questions, feel free to reach out to us:</h5>
+            <ul>
+                <down><h3> Phone: &downarrow; </h3><a href="tel:+39122033569"><p><img src="icon/Call.png" alt="placeholder image" style="width: 50px;height: 53px;"+63 (912) 2033-569</a></p></down>  
+                </ul> 
+        </nav>
+    </div>
+</footer>
+</html>
