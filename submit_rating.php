@@ -3,7 +3,7 @@
         <span class="close">&times;</span>
         <div class="container">
     
-         <h2>Millapre.netlify.app</h2>
+         <h2>arielmillapre.netlify.app</h2>
     
     
     <div class="overflow-box">
