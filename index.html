@@ -138,11 +138,7 @@
   <p>Current Date & Time: <span id="liveClock"></span></p>
 
     <script>
-        
-    </script>
-
-  <script>
-    function updateClock() {
+        function updateClock() {
             const now = new Date();
 
             // Format date and time
@@ -164,6 +160,10 @@
         // Update every second
         setInterval(updateClock, 1000);
         updateClock(); // Initial call
+    </script>
+
+  <script>
+    
     function goToPage() {
       window.location.href = "home"; 
     }
