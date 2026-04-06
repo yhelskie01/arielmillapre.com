@@ -42,7 +42,24 @@
    href="https://mail.google.com/mail/?view=cm&fs=1&to=arielmillapre@gmail.com&su=Hello&body=I%20want%20to%20contact%20you" 
    target="_blank">
             <img src="icon/gmail1.png" alt="placeholder image" style="width: 200px;height: auto;">
-        </a> </li>
+        <script>
+  const email = "your.email@gmail.com";
+  const subject = "Hello";
+  const body = "I want to contact you.";
+  const link = document.getElementById("emailLink");
+
+  // Detect mobile devices
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  if(isMobile){
+    // Use mailto for mobile (opens Gmail app if default)
+    link.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  } else {
+    // Use Gmail web for desktop
+    link.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    link.target = "_blank";
+  }
+</script>
             <li>
             <a href="https://www.linkedin.com/in/ariel-millapre-791234124" target="linkedin.com">
                 <img src="icon/linkedin.png" alt="placeholder image" style="width: 200px;height: auto;">
