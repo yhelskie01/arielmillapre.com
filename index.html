@@ -128,6 +128,32 @@
     
     <button onclick="goToPage()">Get Started</button>
   </div>
+  <p>Current Date & Time: <span id="liveClock"></span></p>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+
+            // Format date and time
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit' 
+            };
+            const formatted = now.toLocaleString('en-US', options);
+
+            // Display in the HTML
+            document.getElementById('liveClock').textContent = formatted;
+        }
+
+        // Update every second
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call
+    </script>
 
   <script>
     function goToPage() {
