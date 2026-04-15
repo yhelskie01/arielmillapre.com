@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #0056b3; /* Professional blue accent */
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #0056b3;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.cta-box {
+    margin-top: 60px;
+    text-align: center;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #004494;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .container { padding: 40px 20px; }
+    .about-header h1 { font-size: 2rem; }
+}
