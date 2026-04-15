@@ -27,20 +27,14 @@
                     <a href="about.HTML">About Us</a>
                     <a href="Education.html">Education</a>                
                 </div>
-
                 </div>
-
             </ul>
-
         </nav>
-
              </div>
 </home>
     </header>
-    
     <main>
         <section id="posts">
- 
 <a href="image/ariel.png">
 <img src="image/ariel.png" alt="Ariel Millapre" 
      style="display: block; margin: 0 auto; border-radius: 50%; width: 150px; height: 150px; ">
@@ -74,8 +68,6 @@
                     <li><a class="taLnk" href="mission.html">Our Mission</a></li>
                     <li><a class="taLnk" href="vision.html" >Vision</a></li>
                     <li><a id="openModal">Privacy&Policy</a></li>
-                    
-
 <div id="myModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
@@ -123,9 +115,8 @@
             If you have any questions or concerns about this privacy policy, please contact us via email [arielmillapre@gmail.com].</p>
     </div>
 </div>
-    </div>
-                    
-                    </ul>
+    </div>            
+            </ul>
             </nav>
         </div>
             <title>Star Rating System</title>
@@ -142,7 +133,6 @@
     </style>
 </head>
 <body>
-
 <h2>Rate Us</h2>
 <div class="stars">
   <span class="star" data-value="1">&#9733;</span>
@@ -152,40 +142,33 @@
   <span class="star" data-value="5">&#9733;</span>
 </div>
 <div id="rating-message"></div>
-
 <script>
 const stars = document.querySelectorAll('.star');
 let selectedRating = 0;
-
 stars.forEach(star => {
   star.addEventListener('mouseover', () => {
     resetStars();
     highlightStars(star.dataset.value);
   });
-
   star.addEventListener('mouseout', () => {
     resetStars();
     if (selectedRating) highlightStars(selectedRating);
   });
-
   star.addEventListener('click', () => {
     selectedRating = star.dataset.value;
     document.getElementById('rating-message').textContent = `Thanks for rating us ${selectedRating} star(s)!`;
     highlightStars(selectedRating);
   });
 });
-
 function highlightStars(rating) {
   for (let i = 0; i < rating; i++) {
     stars[i].classList.add('selected');
   }
 }
-
 function resetStars() {
   stars.forEach(star => star.classList.remove('selected'));
 }
 </script>
-
     </footer>
     <script src="script.js"></script>
     <script src="Lpcss/script.js"></script>
