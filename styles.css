@@ -1,23 +1,5 @@
 body {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: #333;
-        color: white;
-        padding: 15px;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 15px;
-    }
-
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-    }
-
+    
     /* MAIN CONTENT */
     .container {
         display: flex;
