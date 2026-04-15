@@ -190,7 +190,61 @@ h2 {
 a {
     font-weight: 700;
 }
+}
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+    font-size: 25px;
+}
 
+main {
+    padding: 20px;
+    background-color: rgb(223, 223, 223);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: none;
+    color: blue;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    font-weight: 600;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #0f0094;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 12px 16px;
+    display: block;
+    font-weight: 300;
+}
+
+.dropdown-content a:hover {
+    color: #f1c40f;
+    font-weight: 800;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: transparent;
+}
 .active {
     /*background-color: gold !important;*/
     padding: 15px 0;
