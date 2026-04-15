@@ -151,3 +151,48 @@ body {
     display: block;
 
 }
+header {
+    background-image: url('image/J4o.gif'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire header */
+    background-position: center; /* Center the image */
+    height: 190px; /* Set a height for the header */
+    color: white; /* Text color */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+
+    background-color: #4CAF50;;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+header h1 {
+    font-size: 50px;
+
+}
+    
+p {
+    text-align: justify;
+    font-size: 20px;
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: blue;
+    font-size: 35px;
+}
+
+a {
+    font-weight: 700;
+}
+
+.active {
+    /*background-color: gold !important;*/
+    padding: 15px 0;
+    
+}
