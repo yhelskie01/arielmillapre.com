@@ -163,4 +163,23 @@ button.submit-btn:hover {
     .home nav ul li {
         margin-bottom: 10px;
     }
+    .profile-container {
+  text-align: center;      /* Centers the caption text */
+  margin: 20px auto;       /* Centers the entire block and adds vertical spacing */
+  display: table;          /* Ensures the container fits the image width */
+}
+
+.profile-pic {
+  display: block;
+  margin: 0 auto 10px auto; /* Centers image and adds space above the caption */
+  border-radius: 50%;       /* Keeps the circular crop */
+  width: 150px;             /* Adjust size as needed */
+  border: 3px solid #0000FF; /* Optional: adds a blue border to match your theme */
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;              /* Subtle grey for the caption */
+}
 }
