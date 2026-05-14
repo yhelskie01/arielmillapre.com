@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariel Millapre | Education & Skills</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0070f3;
+            --accent-cyan: #00dfd8;
+            --bg-dark: #050505;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text-main: #e0e0e0;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 112, 243, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1.5rem 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--accent-cyan); }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #fff, var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 1.8rem;
+            text-align: center;
+            margin: 40px 0 30px;
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Academic Background Grid */
+        .academic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .academic-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .academic-item:hover { transform: translateY(-5px); }
+
+        .academic-item h3 {
+            color: var(--accent-cyan);
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .institution {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        /* Technical Skills Pills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 20px 0;
+        }
+
+        .skill-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            cursor: default;
+        }
+
+        .skill-pill:hover {
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+		/* Container that holds your cards or sections */
+.responsive-container {
+    display: flex;
+    flex-wrap: wrap;       /* Allows items to drop to the next line if needed */
+    gap: 20px;             /* Space between items */
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Default style for the items/cards (PC View) */
+.flex-item {
+    flex: 1;               /* Items grow to fill space equally */
+    min-width: 300px;      /* Prevents items from getting too skinny */
+    max-width: 450px;
+}
+
+/* Mobile View (Screens smaller than 768px) */
+@media (max-width: 768px) {
+    .responsive-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .flex-item {
+        width: 100%;            /* Make items take full width on phone */
+        max-width: none;
+    }
+}
+.card-icon {
+    width: 150px;          /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 2px;  /* Space between image and title */
+    display: block;
+    border-radius: 8px;   /* Optional: rounds the corners of the image */
+    filter: drop-shadow(0 0 5px rgba(0, 223, 216, 0.3)); /* Subtle cyan glow */
+}
+
+/* If you want the image and title side-by-side */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 2px;
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="active">Education</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Header from image_cb7662.png -->
+        <header class="section-header">
+            <h1>Education & Certifications</h1>
+            <p style="max-width: 700px; margin: 0 auto; opacity: 0.8;">
+                Computer Science graduate with a strong background in software development, networking, cybersecurity, 
+                troubleshooting, and modern technology solutions. Passionate about building secure and innovative digital systems.
+            </p>
+        </header>
+
+        <!-- Academic Background Section -->
+        <section>
+            <h2>Academic Background</h2>
+            <div class="academic-grid">
+                <!-- Item 1 -->
+                <div class="academic-item">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <span class="institution">Computer Communication Development Institute</span>
+                    <p style="font-size: 0.85rem;">Completed comprehensive academic training in programming, networking, software engineering, databases, web development, and system analysis.</p>
+                    <span class="badge">Graduated 2018</span>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="academic-item">
+                    <h3>Transcript of Records</h3>
+                    <span class="institution">Official Academic Documentation</span>
+                    <p style="font-size: 0.85rem;">Official record of completed coursework, technical competencies, academic performance, and specialization subjects.</p>
+                    <span class="badge" style="background: #555;">Academic Record</span>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="academic-item">
+                    <h3>Electrical Installation & Maintenance NCII</h3>
+                    <span class="institution">TESDA Certification</span>
+                    <p style="font-size: 0.85rem;">Certified in electrical installation, maintenance, wiring systems, troubleshooting, and safety procedures.</p>
+                    <span class="badge" style="background: var(--accent-cyan); color: #000;">TESDA Certified</span>
+                </div>
+				<a href="image/diploma.jpeg">
+    <img src="image/diploma.jpeg" class="card-icon" alt="View Certification">
+</a>
+<a href="image/TORp1.jpeg">
+    <img src="image/TORp1.jpeg" class="card-icon" alt="View Certification">
+</a>
+<a href="image/TORp2.jpeg">
+    <img src="image/TORp2.jpeg" class="card-icon" alt="View Certification">
+</a>
+<a href="image/TORp3.jpeg">
+    <img src="image/TORp3.jpeg" class="card-icon" alt="View Certification">
+</a>
+<a href="image/nc2.png">
+    <img src="image/nc2.png" class="card-icon" alt="View Certification">
+</a>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="glass-card" style="margin-top: 50px;">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <span class="skill-pill">HTML</span>
+                <span class="skill-pill">CSS</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">React</span>
+                <span class="skill-pill">Networking</span>
+                <span class="skill-pill">Cybersecurity</span>
+                <span class="skill-pill">Database Management</span>
+                <span class="skill-pill">System Troubleshooting</span>
+                <span class="skill-pill">Electrical Installation</span>
+                <span class="skill-pill">Electrical Maintenance</span>
+                <span class="skill-pill">Wiring & Cabling</span>
+                <span class="skill-pill">Safety Procedures</span>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Ariel Millapre | IT Specialist & Web Developer
+    </footer>
+
+</body>
+</html>

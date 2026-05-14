@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariel G. Millapre | IT Specialist & Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0070f3;
+            --accent-cyan: #00dfd8;
+            --bg-dark: #050505;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text-main: #e0e0e0;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            /* Mimics the circuit background */
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(0, 112, 243, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 2rem 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* Hero Section with Glassmorphism and Profile Picture */
+        .hero-section {
+            max-width: 900px;
+            margin: 80px auto 40px auto;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-cyan);
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255,255,255,0.1); /* Background if image fails */
+            color: rgba(255,255,255,0.3);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            text-align: left; /* Alignment changed for profile next to text */
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            background: linear-gradient(to right, #fff, var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-cyan);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        /* Content Layout */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px 100px;
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            color: #fff;
+            border-left: 4px solid var(--primary-blue);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-item {
+            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .skill-item strong {
+            display: block;
+            color: var(--accent-cyan);
+            margin-bottom: 5px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 112, 243, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* Responsive adjustments for the profile section */
+        @media (max-width: 600px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-content {
+                text-align: center;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+		/* Container that holds your cards or sections */
+.responsive-container {
+    display: flex;
+    flex-wrap: wrap;       /* Allows items to drop to the next line if needed */
+    gap: 20px;             /* Space between items */
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Default style for the items/cards (PC View) */
+.flex-item {
+    flex: 1;               /* Items grow to fill space equally */
+    min-width: 300px;      /* Prevents items from getting too skinny */
+    max-width: 450px;
+}
+
+/* Mobile View (Screens smaller than 768px) */
+@media (max-width: 768px) {
+    .responsive-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .flex-item {
+        width: 100%;            /* Make items take full width on phone */
+        max-width: none;
+    }
+}
+/* Star Rating Logic */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.star-rating input { display: none; }
+
+.star-rating label {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover and Checked states */
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: #ffc107; /* Star Gold */
+    text-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <b class="active">Home</b>
+        <a href="about.html">About Me</a>
+        <a href="educ1.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Refactored Hero Section with Portrait Placement -->
+    <div class="hero-section">
+        <header class="profile-card">
+		
+			<a href="image/ariel.png" class="clickable-square img">
+            <!-- INSTRUCTIONS: Replace the placeholder below with the actual path to your picture. -->
+            <img src="image/ariel.png" alt="Ariel G. Millapre Portrait" class="profile-picture">
+			</a>
+            <!-- IF YOU DO NOT HAVE THE IMAGE PATH YET, THE BELOW CODE WILL SHOW A PLACEHOLDER:
+            <div class="profile-picture">[ Your Profile Pic ]</div>
+            -->
+            
+            <div class="header-content">
+                <h1>Ariel G. Millapre</h1>
+                <div class="subtitle">IT Specialist • Web Developer • Cybersecurity Enthusiast</div>
+            
+            </div>
+        </header>
+    </div>
+
+    <div class="container">
+        
+        <!-- Summary Section -->
+        <section class="glass-card">
+            <h2>Professional Profile</h2>
+            <p>
+                A versatile IT Specialist and Web Developer based in Sorsogon. I hold a <strong>Bachelor of Science in Computer Science</strong> 
+                from Computer Communication Development Institute School, complemented by a Vocational Certification in 
+                <strong>Electrical Installation and Management NCII</strong>. This unique background allows me to bridge the gap 
+                between digital infrastructure and physical electrical systems.
+            </p>
+        </section>
+
+        <!-- Core Expertise Grid -->
+        <section class="glass-card">
+            <h2>Core Expertise</h2>
+            <div class="grid">
+                <div class="skill-item">
+                    <strong>IT Infrastructure</strong>
+                    Managing servers, network administration (firewalls/routers), and maintaining hardware reliability.
+                </div>
+                <div class="skill-item">
+                    <strong>Web Development</strong>
+                    Building responsive solutions using HTML, CSS, JavaScript, React, and Angular.
+                </div>
+                <div class="skill-item">
+                    <strong>Electrical Systems</strong>
+                    Designing and managing physical infrastructure with a focus on safety and integrated workplace environments.
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Statement -->
+        <section class="glass-card" style="text-align: center;">
+            <h2>My Mission</h2>
+            <p>
+                To leverage my multidisciplinary background in IT and electrical systems to create practical, 
+                high-performance, and secure technical environments that empower modern organizations.
+            </p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arielmillapre@gmail.com&su=Project%20Inquiry&body=Hi%20Ariel," class="cta-button">Get In Touch</a>
+        </section>
+		<section class="glass-card" style="text-align: center;">
+            <p>
+                Rating my personal website helps:
+ Boosts SEO, gathers feedback, builds credibility, and guides improvements!
+            </p>
+            <a href="rate.html" class="cta-button">Rate Me</a>
+        </section>
+
+</section>
+    </div>
+
+    <footer>
+        &copy; 2026 Ariel G. Millapre. All Rights Reserved.
+    </footer>
+<script src="rate.js"></script>
+</body>
+</html>

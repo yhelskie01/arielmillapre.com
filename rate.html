@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Ariel Millapre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0070f3;
+            --accent-cyan: #00dfd8;
+            --star-gold: #ffc107;
+            --bg-dark: #050505;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--bg-dark);
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 112, 243, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+        }
+
+        .rating-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 400px;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        h2 {
+            margin-top: 0;
+            background: linear-gradient(to right, #fff, var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Star Rating Styles */
+        .star-rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .star-rating input { display: none; }
+
+        .star-rating label {
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover ~ label,
+        .star-rating input:checked ~ label {
+            color: var(--star-gold);
+            text-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+        }
+
+        .submit-btn {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+			text-decoration: none;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-cyan);
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        /* Success Message State */
+        .thank-you-state {
+            display: none; /* Hidden by default */
+        }
+
+        .thank-you-state i {
+            font-size: 4rem;
+            color: var(--accent-cyan);
+            margin-bottom: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="rating-card" id="card">
+        <!-- Initial Rating View -->
+        <div id="rating-view">
+            <h2>Rate My Services</h2>
+            <p style="opacity: 0.7;">Your feedback helps me improve!</p>
+
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5" class="fas fa-star"></label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4" class="fas fa-star"></label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3" class="fas fa-star"></label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2" class="fas fa-star"></label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1" class="fas fa-star"></label>
+            </div>
+
+            <button class="submit-btn" onclick="submitRating()">Submit Rating</button>
+        </div>
+
+        <!-- Thank You View -->
+        <div id="thank-you-view" class="thank-you-state">
+            <i class="fas fa-check-circle"></i>
+            <h2>Thank You!</h2>
+            <p>We appreciate you rating us. Your feedback has been received.</p>
+            <button class="submit-btn" style="margin-top: 20px;" onclick="resetRating()">Rate Again</button>
+			<a href="home.html" class="submit-btn" style="margin-top: 20px;">Home</a>
+			
+        </div>
+    </div>
+
+    <script>
+        function submitRating() {
+            // Check if a rating is selected
+            const selected = document.querySelector('input[name="rating"]:checked');
+            
+            if (selected) {
+                // Hide rating view and show thank you view
+                document.getElementById('rating-view').style.display = 'none';
+                document.getElementById('thank-you-view').style.display = 'block';
+            } else {
+                alert("Please select a star rating first!");
+            }
+        }
+
+        function resetRating() {
+            // Reset to initial state
+            document.getElementById('rating-view').style.display = 'block';
+            document.getElementById('thank-you-view').style.display = 'none';
+            // Clear radio buttons
+            const radios = document.getElementsByName('rating');
+            radios.forEach(radio => radio.checked = false);
+        }
+    </script>
+
+</body>
+</html>

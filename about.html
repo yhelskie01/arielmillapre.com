@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Ariel G. Millapre</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #050505;
+            --card-bg: #111111;
+            --accent-cyan: #00dfd8;
+            --accent-blue: #3b82f6;
+            --text-white: #ffffff;
+            --text-dim: #a1a1aa;
+            --grid-color: rgba(255, 255, 255, 0.03);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            /* Creating the dotted grid background seen in image_ade9c7.png */
+            background-image: radial-gradient(var(--grid-color) 1px, transparent 1px);
+            background-size: 30px 30px;
+            color: var(--text-white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        nav a {
+            color: var(--text-white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .container {
+            max-width: 850px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Hero Card */
+        .hero-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-cyan);
+            padding: 5px;
+            object-fit: cover;
+        }
+
+        .hero-info h1 {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+        }
+
+        .hero-info p {
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+        }
+
+        /* Content Sections */
+        .content-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 45px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .blue-bar {
+            width: 4px;
+            height: 30px;
+            background-color: var(--accent-blue);
+        }
+
+        .section-header h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .profile-text {
+            color: var(--text-dim);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .profile-text b {
+            color: var(--text-white);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            .hero-info h1 { font-size: 2rem; }
+            nav { gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="active" style="color: var(--accent-cyan);">About Me</a>
+        <a href="educ1.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Hero Section from image_ade9c7.png -->
+        <section class="hero-card">
+            <img src="image/ariel.png" alt="Ariel G. Millapre" class="profile-pic">
+            <div class="hero-info">
+                <h1>Ariel G. Millapre</h1>
+                <p>IT Specialist • Web Developer • Cybersecurity Enthusiast</p>
+            </div>
+        </section>
+
+        <!-- Professional Profile Section -->
+        <section class="content-card">
+            <div class="section-header">
+                <div class="blue-bar"></div>
+                <h2>Professional Profile</h2>
+            </div>
+            <p class="profile-text">
+                A versatile IT Specialist and Web Developer based in Sorsogon. I hold a <b>Bachelor of Science in Computer Science</b> from Computer Communication Development Institute School, complemented by a Vocational Certification in <b>Electrical Installation and Management NCII</b>. This unique background allows me to bridge the gap between digital infrastructure and physical electrical systems.
+            </p>
+        </section>
+		<section class="content-card">
+            <div class="section-header">
+         
+            </div>
+            <p class="profile-text">
+               My professional journey spans IT infrastructure, cybersecurity, web development, and electrical systems, allowing me to deliver comprehensive and practical solutions across multiple technical domains.
+            </p>
+        </section>
+			<section class="content-card">
+            <div class="section-header">
+         
+            </div>
+            <p class="profile-text">
+              As a web developer, I specialize in building functional and visually appealing websites and applications. I work with HTML, CSS, JavaScript, and modern frameworks such as React and Angular, handling both front-end and back-end development. I ensure that websites are responsive, optimized for performance, secure, and aligned with search engine best practices. By collaborating with designers, clients, and development teams, I transform ideas into high-quality digital solutions that meet both business goals and user expectations.
+            </p>
+        </section>
+    </div>
+	</section>
+			<section class="content-card">
+            <div class="section-header">
+         
+            </div>
+            <p class="profile-text">
+              I thrive in dynamic environments that demand technical expertise, problem-solving, and strong communication skills. I am experienced in explaining complex concepts to non-technical users, guiding teams in effectively utilizing IT resources, and implementing practical solutions to real-world challenges. My career is driven by a commitment to innovation, continuous learning, and delivering reliable, efficient, and secure systems.
+Ultimately, my mission is to leverage my IT expertise, web development skills, academic background, and vocational certification in electrical installation to create practical, impactful, and innovative solutions that empower organizations, teams, and individuals in today’s digital and technical landscape.
+            </p>
+        </section>
+    </div>
+
+</body>
+</html>
