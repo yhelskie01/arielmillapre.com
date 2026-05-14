@@ -17,7 +17,7 @@ body {
 
     .content {
         flex: 3;
-        background: white;
+        background: green;
         padding: 20px;
     }
 
